@@ -1,0 +1,6 @@
+2023-10-27 10:01:02 INFO User 'admin' logged in successfully.
+2023-10-27 10:05:44 WARN Invalid password attempt for user 'root' from 192.168.1.105
+2023-10-27 10:05:46 WARN Invalid password attempt for user 'root' from 192.168.1.105
+2023-10-27 10:05:48 WARN Invalid password attempt for user 'root' from 192.168.1.105
+2023-10-27 10:10:12 ERROR Database connection failed: timeout after 30s.
+2023-10-27 10:15:22 INFO File 'secret_data.csv' downloaded by user 'guest'.
