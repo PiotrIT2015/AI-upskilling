@@ -5,7 +5,7 @@
 ## General info
 This small project which I committed to learn a new skill.
 
-* `streamlit run app.py`
+* `streamlit run asking-about-file-content.py`
 
 Ten projekt to lokalna aplikacja RAG (Retrieval-Augmented Generation) z interfejsem webowym w Streamlit, która działa jako asystent do zadawania pytań do własnych dokumentów PDF.
 
@@ -47,7 +47,7 @@ dostaje pytanie użytkownika
 kontekst z dokumentów
 generuje odpowiedź
 
-* `streamlit run app-2.py`
+* `streamlit run get-summary-from-notes.py`
 
 Ten projekt to lokalna aplikacja do automatycznego streszczania notatek z użyciem modeli LLM (Ollama) i Streamlit.
 
