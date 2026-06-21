@@ -5,7 +5,7 @@
 ## General info
 This small project which I committed to learn a new skill.
 
-1. `streamlit run app.py`
+* `streamlit run app.py`
 
 Ten projekt to lokalna aplikacja RAG (Retrieval-Augmented Generation) z interfejsem webowym w Streamlit, która działa jako asystent do zadawania pytań do własnych dokumentów PDF.
 
@@ -20,20 +20,24 @@ DirectoryLoader(DOCS_DIR, glob="./*.pdf", loader_cls=PyPDFLoader)
 skanuje folder data/
 ładuje wszystkie PDF-y
 zamienia je na tekst
+
 ✂️ 2. Dzielenie tekstu na fragmenty (chunking)
 RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 dzieli dokumenty na małe fragmenty
 dzięki temu LLM może je później „przeszukiwać”
+
 🧠 3. Embeddings + baza wektorowa
 OllamaEmbeddings(model="nomic-embed-text")
 Chroma(...)
 każdy fragment PDF zamieniany jest na embedding (wektor)
 zapisywany w bazie ChromaDB
 umożliwia semantyczne wyszukiwanie (nie tylko słowa kluczowe)
+
 🔍 4. Retrieval (wyszukiwanie kontekstu)
 vector_db.as_retriever(search_kwargs={"k": 3})
 przy pytaniu użytkownika
 system szuka 3 najbardziej podobnych fragmentów dokumentów
+
 🧠 5. LLM + RAG (ChatOllama)
 ChatOllama(model="llama3")
 
@@ -43,7 +47,7 @@ dostaje pytanie użytkownika
 kontekst z dokumentów
 generuje odpowiedź
 
-2. `streamlit run app-2.py`
+* `streamlit run app-2.py`
 
 Ten projekt to lokalna aplikacja do automatycznego streszczania notatek z użyciem modeli LLM (Ollama) i Streamlit.
 
@@ -62,7 +66,7 @@ panel boczny z ustawieniami
 przycisk „Generuj podsumowanie”
 wynik w czasie rzeczywistym
 
-3. `python ssh-guard.py`
+* `python ssh-guard.py`
 
 Ten projekt to prosty system wykrywania anomalii w logach SSH / logach systemowych z użyciem lokalnego modelu AI (Ollama).
 
@@ -76,6 +80,7 @@ Skrypt działa inaczej zależnie od systemu:
 
 Windows → czyta logi Security przez PowerShell (Get-WinEvent)
 Linux → śledzi logi SSH przez journalctl -u ssh -f
+
 🚨 2. Wykrywanie podejrzanych zdarzeń
 
 Ma listę wzorców (regex), np.:
@@ -101,6 +106,7 @@ czy to atak (Yes/No)
 jaki IP jest źródłem
 ocena ryzyka 1–10
 krótkie wyjaśnienie
+
 📦 4. Buffering zdarzeń
 
 Skrypt nie analizuje pojedynczych logów od razu, tylko:
@@ -130,7 +136,7 @@ skanowanie loginów
 próby logowania na nieistniejących użytkowników
 automatyczne boty próbujące hasła
 
-4. `python log-analyzer.py`
+* `python log-analyzer.py`
 
 Ten projekt to narzędzie do analizy plików logów przy użyciu lokalnego modelu AI (Ollama).
 
@@ -144,6 +150,7 @@ AI log analyzer / mini system analizy bezpieczeństwa i błędów systemowych
 LOG_FILE_PATH = "sample.log"
 bierze plik tekstowy z logami systemowymi, aplikacyjnymi lub security
 sprawdza czy istnieje
+
 📦 2. Dzieli logi na porcje (chunking)
 CHUNK_SIZE = 50
 bierze 50 linii naraz
@@ -160,6 +167,7 @@ szukaj:
 ataków (brute force, SQL injection, unauthorized access)
 błędów systemowych / hardware failure
 anomalii
+
 📊 4. AI zwraca analizę
 
 Model odpowiada np.:
@@ -170,7 +178,7 @@ podejrzane logowania
 błędy systemu
 anomalie
 
-5. `python chatbot.py`
+* `python chatbot.py`
 
 ## Technologies
 * Python version: 3.5
